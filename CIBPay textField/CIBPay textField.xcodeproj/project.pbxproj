@@ -12,6 +12,8 @@
 		05065C5B2AD3F43E00F4DFC3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05065C5A2AD3F43E00F4DFC3 /* ViewController.swift */; };
 		05065C602AD3F43F00F4DFC3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05065C5F2AD3F43F00F4DFC3 /* Assets.xcassets */; };
 		05065C632AD3F43F00F4DFC3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05065C612AD3F43F00F4DFC3 /* LaunchScreen.storyboard */; };
+		05065C862AD5595300F4DFC3 /* PasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05065C852AD5595300F4DFC3 /* PasswordViewController.swift */; };
+		05065C882AD5597000F4DFC3 /* UsernameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05065C872AD5597000F4DFC3 /* UsernameViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		05065C5F2AD3F43F00F4DFC3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		05065C622AD3F43F00F4DFC3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		05065C642AD3F43F00F4DFC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		05065C852AD5595300F4DFC3 /* PasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordViewController.swift; sourceTree = "<group>"; };
+		05065C872AD5597000F4DFC3 /* UsernameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsernameViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +61,8 @@
 				05065C562AD3F43E00F4DFC3 /* AppDelegate.swift */,
 				05065C582AD3F43E00F4DFC3 /* SceneDelegate.swift */,
 				05065C5A2AD3F43E00F4DFC3 /* ViewController.swift */,
+				05065C852AD5595300F4DFC3 /* PasswordViewController.swift */,
+				05065C872AD5597000F4DFC3 /* UsernameViewController.swift */,
 				05065C5F2AD3F43F00F4DFC3 /* Assets.xcassets */,
 				05065C612AD3F43F00F4DFC3 /* LaunchScreen.storyboard */,
 				05065C642AD3F43F00F4DFC3 /* Info.plist */,
@@ -134,7 +140,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05065C882AD5597000F4DFC3 /* UsernameViewController.swift in Sources */,
 				05065C5B2AD3F43E00F4DFC3 /* ViewController.swift in Sources */,
+				05065C862AD5595300F4DFC3 /* PasswordViewController.swift in Sources */,
 				05065C572AD3F43E00F4DFC3 /* AppDelegate.swift in Sources */,
 				05065C592AD3F43E00F4DFC3 /* SceneDelegate.swift in Sources */,
 			);
