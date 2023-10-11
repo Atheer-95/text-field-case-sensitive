@@ -9,26 +9,52 @@ import UIKit
 
 class PasswordViewController: UIViewController {
 
-    private var  passwordTextField: UITextField = {
-        let tf = UITextField()
+    lazy var  passwordTextField1: CustomTextField = {
+        let tf = CustomTextField()
+        tf.placeholder = "Enter Password"
         return tf
     }()
     
+    lazy var  passwordTextField2: CustomTextField = {
+        let tf = CustomTextField()
+        tf.placeholder = "confirm Password"
+        return tf
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setTextField()
+        view.backgroundColor = .white
         // Do any additional setup after loading the view.
     }
   
    func setTextField(){
-       view.addSubview(passwordTextField)
-       passwordTextField.translatesAutoresizingMaskIntoConstraints = false
+       view.addSubview(passwordTextField1)
+       view.addSubview(passwordTextField2)
+       passwordTextField1.delegate = self
+       passwordTextField2.delegate = self
+       
+       passwordTextField1.translatesAutoresizingMaskIntoConstraints = false
+       passwordTextField2.translatesAutoresizingMaskIntoConstraints = false
        
        NSLayoutConstraint.activate([
-        passwordTextField.topAnchor.constraint(equalTo: view.topAnchor, constant: 40),
-        passwordTextField.heightAnchor.constraint(equalToConstant: 40),
-        passwordTextField.widthAnchor.constraint(equalToConstant: view.frame.width - 20)
+        passwordTextField1.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 40),
+        passwordTextField1.heightAnchor.constraint(equalToConstant: 50),
+        passwordTextField1.leftAnchor.constraint(equalTo:  view.leftAnchor, constant: 16),
+        passwordTextField1.rightAnchor.constraint(equalTo:  view.rightAnchor, constant: -16),
+        
+        passwordTextField2.topAnchor.constraint(equalTo: passwordTextField1.bottomAnchor, constant: 16),
+        passwordTextField2.heightAnchor.constraint(equalToConstant: 50),
+        passwordTextField2.leftAnchor.constraint(equalTo:  view.leftAnchor, constant: 16),
+        passwordTextField2.rightAnchor.constraint(equalTo:  view.rightAnchor, constant: -16),
        ])
+    }
+}
+
+// MARK: - Text Field 
+extension PasswordViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        print("Password : \(textField.text ?? "nil" )")
+        return true
     }
 }

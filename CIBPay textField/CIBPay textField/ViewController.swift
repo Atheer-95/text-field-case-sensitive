@@ -35,13 +35,12 @@ class ViewController: UIViewController {
         usernameBtn.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             pswBtn.heightAnchor.constraint(equalToConstant: 40),
-            pswBtn.widthAnchor.constraint(equalToConstant: 80),
             pswBtn.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: 0),
             pswBtn.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: 0),
             
             usernameBtn.heightAnchor.constraint(equalToConstant: 40),
-            usernameBtn.widthAnchor.constraint(equalToConstant: 80),
-            usernameBtn.topAnchor.constraint(equalTo: pswBtn.bottomAnchor, constant: 16)
+            usernameBtn.topAnchor.constraint(equalTo: pswBtn.bottomAnchor, constant: 16),
+            usernameBtn.centerXAnchor.constraint(equalTo: pswBtn.centerXAnchor)
         ])
         
         
@@ -49,12 +48,12 @@ class ViewController: UIViewController {
 
     @objc func goToPsw(){
         let vc = PasswordViewController()
-        self.present(vc, animated: false)
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     @objc func goToUser(){
         let vc = UsernameViewController()
-        self.present(vc, animated: false)
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 }
 

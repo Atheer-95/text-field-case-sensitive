@@ -11,9 +11,9 @@
 		05065C592AD3F43E00F4DFC3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05065C582AD3F43E00F4DFC3 /* SceneDelegate.swift */; };
 		05065C5B2AD3F43E00F4DFC3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05065C5A2AD3F43E00F4DFC3 /* ViewController.swift */; };
 		05065C602AD3F43F00F4DFC3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05065C5F2AD3F43F00F4DFC3 /* Assets.xcassets */; };
-		05065C632AD3F43F00F4DFC3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05065C612AD3F43F00F4DFC3 /* LaunchScreen.storyboard */; };
 		05065C862AD5595300F4DFC3 /* PasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05065C852AD5595300F4DFC3 /* PasswordViewController.swift */; };
 		05065C882AD5597000F4DFC3 /* UsernameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05065C872AD5597000F4DFC3 /* UsernameViewController.swift */; };
+		05065C8A2AD68CCB00F4DFC3 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05065C892AD68CCB00F4DFC3 /* CustomTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,10 +22,10 @@
 		05065C582AD3F43E00F4DFC3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		05065C5A2AD3F43E00F4DFC3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		05065C5F2AD3F43F00F4DFC3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		05065C622AD3F43F00F4DFC3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		05065C642AD3F43F00F4DFC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		05065C852AD5595300F4DFC3 /* PasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordViewController.swift; sourceTree = "<group>"; };
 		05065C872AD5597000F4DFC3 /* UsernameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsernameViewController.swift; sourceTree = "<group>"; };
+		05065C892AD68CCB00F4DFC3 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,8 +63,8 @@
 				05065C5A2AD3F43E00F4DFC3 /* ViewController.swift */,
 				05065C852AD5595300F4DFC3 /* PasswordViewController.swift */,
 				05065C872AD5597000F4DFC3 /* UsernameViewController.swift */,
+				05065C892AD68CCB00F4DFC3 /* CustomTextField.swift */,
 				05065C5F2AD3F43F00F4DFC3 /* Assets.xcassets */,
-				05065C612AD3F43F00F4DFC3 /* LaunchScreen.storyboard */,
 				05065C642AD3F43F00F4DFC3 /* Info.plist */,
 			);
 			path = "CIBPay textField";
@@ -128,7 +128,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				05065C632AD3F43F00F4DFC3 /* LaunchScreen.storyboard in Resources */,
 				05065C602AD3F43F00F4DFC3 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -142,6 +141,7 @@
 			files = (
 				05065C882AD5597000F4DFC3 /* UsernameViewController.swift in Sources */,
 				05065C5B2AD3F43E00F4DFC3 /* ViewController.swift in Sources */,
+				05065C8A2AD68CCB00F4DFC3 /* CustomTextField.swift in Sources */,
 				05065C862AD5595300F4DFC3 /* PasswordViewController.swift in Sources */,
 				05065C572AD3F43E00F4DFC3 /* AppDelegate.swift in Sources */,
 				05065C592AD3F43E00F4DFC3 /* SceneDelegate.swift in Sources */,
@@ -149,17 +149,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		05065C612AD3F43F00F4DFC3 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				05065C622AD3F43F00F4DFC3 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		05065C652AD3F43F00F4DFC3 /* Debug */ = {
@@ -296,6 +285,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -324,6 +314,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
