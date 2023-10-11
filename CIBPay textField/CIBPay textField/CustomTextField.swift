@@ -14,7 +14,7 @@ class CustomTextField: UITextField {
     init(insets: UIEdgeInsets =  UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)){
         self.insets = insets
         super.init(frame: .zero)
-        backgroundColor = .systemGray
+        backgroundColor = .white
         layer.cornerRadius = 5
         layer.borderWidth = 1.5
         layer.borderColor = UIColor.gray.cgColor

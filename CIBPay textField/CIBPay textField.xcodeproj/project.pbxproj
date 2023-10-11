@@ -14,6 +14,11 @@
 		05065C862AD5595300F4DFC3 /* PasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05065C852AD5595300F4DFC3 /* PasswordViewController.swift */; };
 		05065C882AD5597000F4DFC3 /* UsernameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05065C872AD5597000F4DFC3 /* UsernameViewController.swift */; };
 		05065C8A2AD68CCB00F4DFC3 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05065C892AD68CCB00F4DFC3 /* CustomTextField.swift */; };
+		05065C8D2AD6B56E00F4DFC3 /* GenericTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05065C8C2AD6B56E00F4DFC3 /* GenericTableViewController.swift */; };
+		05065C902AD6B62000F4DFC3 /* GenericTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05065C8F2AD6B62000F4DFC3 /* GenericTableViewCell.swift */; };
+		05065C922AD6CA7800F4DFC3 /* TextFieldTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05065C912AD6CA7800F4DFC3 /* TextFieldTableViewCell.swift */; };
+		05065C952AD6D08700F4DFC3 /* UsernameFormatsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05065C942AD6D08700F4DFC3 /* UsernameFormatsTableViewCell.swift */; };
+		05065C972AD6D6A600F4DFC3 /* ButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05065C962AD6D6A600F4DFC3 /* ButtonTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +31,11 @@
 		05065C852AD5595300F4DFC3 /* PasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordViewController.swift; sourceTree = "<group>"; };
 		05065C872AD5597000F4DFC3 /* UsernameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsernameViewController.swift; sourceTree = "<group>"; };
 		05065C892AD68CCB00F4DFC3 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		05065C8C2AD6B56E00F4DFC3 /* GenericTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericTableViewController.swift; sourceTree = "<group>"; };
+		05065C8F2AD6B62000F4DFC3 /* GenericTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericTableViewCell.swift; sourceTree = "<group>"; };
+		05065C912AD6CA7800F4DFC3 /* TextFieldTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldTableViewCell.swift; sourceTree = "<group>"; };
+		05065C942AD6D08700F4DFC3 /* UsernameFormatsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsernameFormatsTableViewCell.swift; sourceTree = "<group>"; };
+		05065C962AD6D6A600F4DFC3 /* ButtonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +71,8 @@
 				05065C562AD3F43E00F4DFC3 /* AppDelegate.swift */,
 				05065C582AD3F43E00F4DFC3 /* SceneDelegate.swift */,
 				05065C5A2AD3F43E00F4DFC3 /* ViewController.swift */,
+				05065C932AD6CA8300F4DFC3 /* Cells */,
+				05065C8E2AD6B5F900F4DFC3 /* Generic Table */,
 				05065C852AD5595300F4DFC3 /* PasswordViewController.swift */,
 				05065C872AD5597000F4DFC3 /* UsernameViewController.swift */,
 				05065C892AD68CCB00F4DFC3 /* CustomTextField.swift */,
@@ -68,6 +80,25 @@
 				05065C642AD3F43F00F4DFC3 /* Info.plist */,
 			);
 			path = "CIBPay textField";
+			sourceTree = "<group>";
+		};
+		05065C8E2AD6B5F900F4DFC3 /* Generic Table */ = {
+			isa = PBXGroup;
+			children = (
+				05065C8C2AD6B56E00F4DFC3 /* GenericTableViewController.swift */,
+				05065C8F2AD6B62000F4DFC3 /* GenericTableViewCell.swift */,
+			);
+			path = "Generic Table";
+			sourceTree = "<group>";
+		};
+		05065C932AD6CA8300F4DFC3 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				05065C912AD6CA7800F4DFC3 /* TextFieldTableViewCell.swift */,
+				05065C942AD6D08700F4DFC3 /* UsernameFormatsTableViewCell.swift */,
+				05065C962AD6D6A600F4DFC3 /* ButtonTableViewCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,10 +171,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				05065C882AD5597000F4DFC3 /* UsernameViewController.swift in Sources */,
+				05065C972AD6D6A600F4DFC3 /* ButtonTableViewCell.swift in Sources */,
 				05065C5B2AD3F43E00F4DFC3 /* ViewController.swift in Sources */,
+				05065C8D2AD6B56E00F4DFC3 /* GenericTableViewController.swift in Sources */,
 				05065C8A2AD68CCB00F4DFC3 /* CustomTextField.swift in Sources */,
 				05065C862AD5595300F4DFC3 /* PasswordViewController.swift in Sources */,
+				05065C902AD6B62000F4DFC3 /* GenericTableViewCell.swift in Sources */,
+				05065C922AD6CA7800F4DFC3 /* TextFieldTableViewCell.swift in Sources */,
 				05065C572AD3F43E00F4DFC3 /* AppDelegate.swift in Sources */,
+				05065C952AD6D08700F4DFC3 /* UsernameFormatsTableViewCell.swift in Sources */,
 				05065C592AD3F43E00F4DFC3 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -282,10 +318,9 @@
 				INFOPLIST_FILE = "CIBPay textField/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -311,10 +346,9 @@
 				INFOPLIST_FILE = "CIBPay textField/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -23,6 +23,12 @@ class ViewController: UIViewController {
         return btn
     }()
     
+//    private var genericTabelbtn: UIButton = {
+//        let btn  = UIButton()
+//        btn.setTitle("Go to Generic Table", for: .normal)
+//        btn.addTarget(self, action: #selector(goToTable), for: .touchUpInside)
+//        return btn
+//    }()
     override func viewDidLoad() {
         super.viewDidLoad()
         setButtons()
@@ -55,5 +61,11 @@ class ViewController: UIViewController {
         let vc = UsernameViewController()
         self.navigationController?.pushViewController(vc, animated: true)
     }
+    
+//    @objc func goToTable(){
+//        let vc = GenericTableViewController()
+//        self.navigationController?.pushViewController(vc, animated: true)
+//    }
 }
+
 
