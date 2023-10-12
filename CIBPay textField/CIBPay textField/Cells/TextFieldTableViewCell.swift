@@ -7,7 +7,8 @@
 
 import UIKit
 
-class TextFieldTableViewCell: UITableViewCell {
+class TextFieldTableViewCell: UITableViewCell, TextFieldFormateDelegate {
+   
 
     lazy var usernameTextField: CustomTextField = {
         let tf = CustomTextField()
@@ -33,11 +34,16 @@ class TextFieldTableViewCell: UITableViewCell {
         
         NSLayoutConstraint.activate([
             usernameTextField.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 40),
-            usernameTextField.heightAnchor.constraint(equalToConstant: 40),
+            usernameTextField.heightAnchor.constraint(equalToConstant: 60),
+            
             usernameTextField.leftAnchor.constraint(equalTo:  leftAnchor, constant: 16),
             usernameTextField.rightAnchor.constraint(equalTo:  rightAnchor, constant: -16)
         ])
      }
+    
+    func format(text: String) {
+        <#code#>
+    }
     
     
     required init?(coder: NSCoder) {

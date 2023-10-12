@@ -20,6 +20,19 @@ class UsernameViewController: UIViewController {
         return tf
     }()
     
+    lazy var nextButton: CustomButton = {
+        let btn = CustomButton()
+        btn.filledStyleButton(title: "Next")
+        return btn
+    }()
+    
+    lazy var previousButton: CustomButton = {
+        let btn = CustomButton()
+        btn.borderStyledButton(title: "Previous")
+        return btn
+    }()
+    
+    
     lazy var tableView: UITableView = {
         let tb = UITableView()
         return tb
@@ -30,8 +43,9 @@ class UsernameViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .white
         setUI()
+        
         tableView.register(TextFieldTableViewCell.self, forCellReuseIdentifier: TextFieldTableViewCellIdentifier)
-        tableView.register(UsernameFormatsTableViewCell.self, forCellReuseIdentifier: UsernameFormatsTableViewCellIdentifier)
+        tableView.register(TextFieldFormatsTableViewCell.self, forCellReuseIdentifier: UsernameFormatsTableViewCellIdentifier)
         tableView.register(ButtonTableViewCell.self, forCellReuseIdentifier: ButtonTableViewCellIdentifier)
     }
     
@@ -42,8 +56,8 @@ class UsernameViewController: UIViewController {
             return false
         }
         
-        let password = usernameTF.text!.trimmingCharacters(in: .whitespacesAndNewlines)
-        if password.count < 6 {
+        let username = usernameTF.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        if username.count < 6 {
            print("Not valid")
             return false
         }
@@ -61,7 +75,7 @@ extension UsernameViewController: UITableViewDelegate, UITableViewDataSource {
         switch Section.allCases[section] {
         case .usernameTextField: return 1
         case .usernameFormats: return 5 // formats
-        case .buttons: return 2
+//        case .buttons: return 2
         }
     }
     
@@ -71,28 +85,38 @@ extension UsernameViewController: UITableViewDelegate, UITableViewDataSource {
             let cell: TextFieldTableViewCell = tableView.dequeueReusableCell(withIdentifier: TextFieldTableViewCellIdentifier) as! TextFieldTableViewCell
             return cell
         case .usernameFormats:
-            let cell: UsernameFormatsTableViewCell = tableView.dequeueReusableCell(withIdentifier: UsernameFormatsTableViewCellIdentifier) as! UsernameFormatsTableViewCell
-            cell.setupLabel(text: "this is username format")
+            let cell: TextFieldFormatsTableViewCell = tableView.dequeueReusableCell(withIdentifier: UsernameFormatsTableViewCellIdentifier) as! TextFieldFormatsTableViewCell
+            let data = usernameFormats[indexPath.row]
+//            cell.setupLabel(text: data)
+            cell.setupData(data: data.format)
+            cell.isTextFormated(isUsernameValid())
             return cell
-        case .buttons:
-            let cell: ButtonTableViewCell = tableView.dequeueReusableCell(withIdentifier: ButtonTableViewCellIdentifier) as! ButtonTableViewCell
-            return cell
+//        case .buttons:
+//            let cell: ButtonTableViewCell = tableView.dequeueReusableCell(withIdentifier: ButtonTableViewCellIdentifier) as! ButtonTableViewCell
+//            return cell
             
         }
             
     }
     
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        switch Section.allCases[section]{
+        case.usernameTextField: return "Enter your preferred username"
+        case .usernameFormats: return ""
+        }
+    }
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         switch Section.allCases[indexPath.section] {
-        case .usernameTextField: return 80
-        case .usernameFormats: return 25
-        case .buttons: return 100
+        case .usernameTextField: return 100
+        case .usernameFormats: return 30
+//        case .buttons: return 100
         }
     }
     
 }
 
-// MARK: - Text Field
+// MARK: - Text Field Delegate
 extension UsernameViewController: UITextFieldDelegate {
 
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -113,7 +137,7 @@ extension UsernameViewController: UITextFieldDelegate {
 
         
         // make sure the result is under 30 characters
-        return updatedText.count <= 30
+        return updatedText.count <= 30 && isUsernameValid()
         
         
     }
@@ -123,15 +147,33 @@ extension UsernameViewController: UITextFieldDelegate {
 extension UsernameViewController {
     func setUI(){
         view.addSubview(tableView)
+        view.addSubview(nextButton)
+        view.addSubview(previousButton)
+        view.addSubview(nextButton)
+        
         tableView.translatesAutoresizingMaskIntoConstraints = false
+        nextButton.translatesAutoresizingMaskIntoConstraints = false
+        previousButton.translatesAutoresizingMaskIntoConstraints = false
+        nextButton.translatesAutoresizingMaskIntoConstraints = false
+        
         tableView.delegate = self
         tableView.dataSource = self
         tableView.separatorStyle = .none
+        
+        
         NSLayoutConstraint.activate([
             tableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             tableView.leftAnchor.constraint(equalTo:  view.leftAnchor),
             tableView.rightAnchor.constraint(equalTo:  view.rightAnchor),
-            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+            tableView.bottomAnchor.constraint(equalTo: nextButton.topAnchor),
+            
+            nextButton.bottomAnchor.constraint(equalTo: previousButton.topAnchor, constant: -12),
+            nextButton.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 16),
+            nextButton.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -16),
+            
+            previousButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -12),
+            previousButton.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 16),
+            previousButton.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -16)
         ])
      }
 
@@ -147,15 +189,26 @@ extension UsernameViewController {
  Alphanumeric (xshi193)
  
  */
+// MARK: -
 
+extension UsernameViewController: TextFieldFormateDelegate {
+    func format(text: String) {
+
+    }
+}
+
+// MARK: - Sections
 private enum Section: CaseIterable {
-    case usernameTextField, usernameFormats, buttons
+    case usernameTextField, usernameFormats
+//         buttons
     
     var title: String {
         switch self {
         case .usernameTextField: return ""
         case .usernameFormats: return ""
-        case .buttons: return ""
+//        case .buttons: return ""
         }
     }
 }
+
+

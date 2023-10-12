@@ -8,16 +8,36 @@
 import UIKit
 
 class ButtonTableViewCell: UITableViewCell {
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    
+    lazy var button: UIButton = {
+        let btn = UIButton()
+        return btn
+    }()
+    
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
+        setupButton()
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    
+   
+    func setupButton(){
+        contentView.addSubview(button)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        
+        NSLayoutConstraint.activate([
+            button.topAnchor.constraint(equalTo: topAnchor, constant: 12),
+            button.leftAnchor.constraint(equalTo: leftAnchor, constant: 16),
+            button.rightAnchor.constraint(equalTo: rightAnchor, constant: 16),
+            button.bottomAnchor.constraint(equalTo: bottomAnchor, constant: 12)
+        ])
     }
-
+    
+    func buttonFilledStyle(){
+        
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
 }
