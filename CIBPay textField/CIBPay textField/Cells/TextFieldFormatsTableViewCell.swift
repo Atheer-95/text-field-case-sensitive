@@ -80,9 +80,8 @@ class TextFieldFormatsTableViewCell: UITableViewCell {
 
     
     func changeOptionState(){
-        formatLabel.textColor = .green
         formatImage.image = UIImage(systemName: "checkmark.circle.fill")
-        formatImage.tintColor = .green
+        formatImage.tintColor = .systemGreen
     }
     
     required init?(coder: NSCoder) {

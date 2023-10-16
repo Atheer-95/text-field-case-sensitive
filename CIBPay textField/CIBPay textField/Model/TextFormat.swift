@@ -21,13 +21,3 @@ var usernameFormats: [TextFormat] = [
     TextFormat(format: "Alphanumeric (xshi193)")
 ]
 
-/*
-Username Rules: -
-
-Maximum length should be 30 characters
-Minimum length should be 6 characters
-Special characters not allowed. (#, %, &, ^, !)
-Spaces is not allowed.
-Alphanumeric (xshi193)
-
-*/

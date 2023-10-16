@@ -91,9 +91,11 @@ extension UsernameViewController: UITableViewDelegate, UITableViewDataSource {
             return cell
         case .usernameFormats:
             let cell: TextFieldFormatsTableViewCell = tableView.dequeueReusableCell(withIdentifier: UsernameFormatsTableViewCellIdentifier) as! TextFieldFormatsTableViewCell
-            let data = usernameFormats[indexPath.row]
+//            let data = usernameFormats[indexPath.row]
 //            cell.setupLabel(text: data)
-            cell.setupData(data: data.format)
+            let format = TextFieldFormats.allCases[indexPath.row].title
+            cell.setupData(data: format)
+//            cell.setupData(data: data.format)
             cell.isTextFormated(textFiledInput ?? "")
             return cell
 //        case .buttons:
@@ -121,11 +123,6 @@ extension UsernameViewController: UITableViewDelegate, UITableViewDataSource {
     
 }
 
-// MARK: - Text Field Delegate
-extension UsernameViewController: UITextFieldDelegate {
-
-   
-}
 
 //MARK: - Constraints
 extension UsernameViewController {
@@ -162,23 +159,13 @@ extension UsernameViewController {
      }
 
 }
-/*
- 
- Username Rules: -
- 
- Maximum length should be 30 characters
- Minimum length should be 6 characters
- Special characters not allowed. (#, %, &, ^, !)
- Spaces is not allowed.
- Alphanumeric (xshi193)
- 
- */
+
 // MARK: - TextFieldFormateDelegate
 
 extension UsernameViewController: TextFieldFormateDelegate {
     func format(text: String ) {
         self.textFiledInput = text
-        self.tableView.reloadSections(IndexSet(integersIn: 1...1), with: .automatic)
+        self.tableView.reloadSections(IndexSet(integersIn: 1...1), with: .none)
     }
 }
 
@@ -197,3 +184,35 @@ private enum Section: CaseIterable {
 }
 
 
+
+enum TextFieldFormats: CaseIterable {
+    case maximum_length,
+    minimum_length,
+    special_characters,
+    spaces,
+    alphanumeric
+    
+    var title: String {
+        switch self {
+            
+        case .maximum_length: return "Maximum length should be 30 characters"
+        case .minimum_length: return "Minimum length should be 6 characters"
+        case .special_characters: return "Special characters not allowed. (#, %, &, ^, !)"
+        case .spaces: return "Spaces is not allowed."
+        case .alphanumeric: return "Alphanumeric (xshi193)"
+        }
+    }
+}
+
+
+/*
+ 
+ Username Rules: -
+ 
+ Maximum length should be 30 characters
+ Minimum length should be 6 characters
+ Special characters not allowed. (#, %, &, ^, !)
+ Spaces is not allowed.
+ Alphanumeric (xshi193)
+ 
+ */
