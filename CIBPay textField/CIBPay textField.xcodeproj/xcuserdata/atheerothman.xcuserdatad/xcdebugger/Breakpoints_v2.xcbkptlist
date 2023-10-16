@@ -3,4 +3,54 @@
    uuid = "67B04B55-367F-446C-A913-82C86180A768"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C0DF9DAC-7A9E-466C-A12C-D74C8D6C2932"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CIBPay textField/UsernameViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "180"
+            endingLineNumber = "180"
+            landmarkName = "format(text:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "C0DF9DAC-7A9E-466C-A12C-D74C8D6C2932 - 58135470a7acd51a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CIBPay_textField.UsernameViewController.format(text: Swift.String) -&gt; ()"
+                  moduleName = "CIBPay textField"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/atheerothman/text-field-case-sensitive/CIBPay%20textField/CIBPay%20textField/UsernameViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "181"
+                  endingLineNumber = "181"
+                  offsetFromSymbolStart = "56">
+               </Location>
+               <Location
+                  uuid = "C0DF9DAC-7A9E-466C-A12C-D74C8D6C2932 - 58135470a7acd5fb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CIBPay_textField.UsernameViewController.format(text: Swift.String) -&gt; ()"
+                  moduleName = "CIBPay textField"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/atheerothman/text-field-case-sensitive/CIBPay%20textField/CIBPay%20textField/UsernameViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "180"
+                  endingLineNumber = "180"
+                  offsetFromSymbolStart = "56">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

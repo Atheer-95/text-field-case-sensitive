@@ -58,7 +58,6 @@
 		05065C4A2AD3F43E00F4DFC3 = {
 			isa = PBXGroup;
 			children = (
-				05065C9E2AD81CE800F4DFC3 /* TextFieldFormateDelegate.swift */,
 				05065C552AD3F43E00F4DFC3 /* CIBPay textField */,
 				05065C542AD3F43E00F4DFC3 /* Products */,
 			);
@@ -75,6 +74,7 @@
 		05065C552AD3F43E00F4DFC3 /* CIBPay textField */ = {
 			isa = PBXGroup;
 			children = (
+				05065C9E2AD81CE800F4DFC3 /* TextFieldFormateDelegate.swift */,
 				05065C562AD3F43E00F4DFC3 /* AppDelegate.swift */,
 				05065C582AD3F43E00F4DFC3 /* SceneDelegate.swift */,
 				05065C5A2AD3F43E00F4DFC3 /* ViewController.swift */,

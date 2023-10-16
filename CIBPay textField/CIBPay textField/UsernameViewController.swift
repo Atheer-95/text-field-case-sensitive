@@ -12,6 +12,8 @@ class UsernameViewController: UIViewController {
     let TextFieldTableViewCellIdentifier = "TextFieldTableViewCell"
     let UsernameFormatsTableViewCellIdentifier = "UsernameFormatsTableViewCell"
     let ButtonTableViewCellIdentifier = "ButtonTableViewCell"
+    var textFiledInput: String?
+    
     
     lazy var usernameTF: CustomTextField = {
         let tf = CustomTextField()
@@ -51,17 +53,17 @@ class UsernameViewController: UIViewController {
     
     func isUsernameValid() -> Bool{
         
-        if usernameTF.text?.trimmingCharacters(in: .whitespacesAndNewlines) == ""{
-            print("Not valid")
-            return false
-        }
-        
-        let username = usernameTF.text!.trimmingCharacters(in: .whitespacesAndNewlines)
-        if username.count < 6 {
-           print("Not valid")
-            return false
-        }
-        return true
+//        if usernameTF.text?.trimmingCharacters(in: .whitespacesAndNewlines) == ""{
+//            print("Not valid")
+//            return false
+//        }
+//        
+//        let username = usernameTF.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+//        if username.count < 6 {
+//           print("Not valid")
+//            return false
+//        }
+        return false
     }
 
 }
@@ -83,13 +85,16 @@ extension UsernameViewController: UITableViewDelegate, UITableViewDataSource {
         switch Section.allCases[indexPath.section] {
         case .usernameTextField:
             let cell: TextFieldTableViewCell = tableView.dequeueReusableCell(withIdentifier: TextFieldTableViewCellIdentifier) as! TextFieldTableViewCell
+    
+            cell.formatDelegate = self
+//            cell.format(text: cell.usernameTextField.text ?? "Null")
             return cell
         case .usernameFormats:
             let cell: TextFieldFormatsTableViewCell = tableView.dequeueReusableCell(withIdentifier: UsernameFormatsTableViewCellIdentifier) as! TextFieldFormatsTableViewCell
             let data = usernameFormats[indexPath.row]
 //            cell.setupLabel(text: data)
             cell.setupData(data: data.format)
-            cell.isTextFormated(isUsernameValid())
+            cell.isTextFormated(textFiledInput ?? "")
             return cell
 //        case .buttons:
 //            let cell: ButtonTableViewCell = tableView.dequeueReusableCell(withIdentifier: ButtonTableViewCellIdentifier) as! ButtonTableViewCell
@@ -119,28 +124,7 @@ extension UsernameViewController: UITableViewDelegate, UITableViewDataSource {
 // MARK: - Text Field Delegate
 extension UsernameViewController: UITextFieldDelegate {
 
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        print("Username : \(textField.text ?? "nil" )")
-        
-        return isUsernameValid()
-    }
-    
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        // get the current text, or use an empty string if that failed
-        let currentText = textField.text ?? ""
-
-        // attempt to read the range they are trying to change, or exit if we can't
-        guard let stringRange = Range(range, in: currentText) else { return false }
-
-        // add their new text to the existing text
-        let updatedText = currentText.replacingCharacters(in: stringRange, with: string)
-
-        
-        // make sure the result is under 30 characters
-        return updatedText.count <= 30 && isUsernameValid()
-        
-        
-    }
+   
 }
 
 //MARK: - Constraints
@@ -189,11 +173,12 @@ extension UsernameViewController {
  Alphanumeric (xshi193)
  
  */
-// MARK: -
+// MARK: - TextFieldFormateDelegate
 
 extension UsernameViewController: TextFieldFormateDelegate {
-    func format(text: String) {
-
+    func format(text: String ) {
+        self.textFiledInput = text
+        self.tableView.reloadSections(IndexSet(integersIn: 1...1), with: .automatic)
     }
 }
 

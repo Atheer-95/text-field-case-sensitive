@@ -8,5 +8,6 @@
 import Foundation
 
 protocol TextFieldFormateDelegate {
+//    func format(text: String, cell: TextFieldTableViewCell)
     func format(text: String)
 }

@@ -7,9 +7,12 @@
 
 import UIKit
 
-class TextFieldTableViewCell: UITableViewCell, TextFieldFormateDelegate {
+class TextFieldTableViewCell: UITableViewCell {
    
 
+    
+    var formatDelegate: TextFieldFormateDelegate?
+    
     lazy var usernameTextField: CustomTextField = {
         let tf = CustomTextField()
         tf.placeholder = "Username"
@@ -30,6 +33,8 @@ class TextFieldTableViewCell: UITableViewCell, TextFieldFormateDelegate {
         contentView.addSubview(usernameTextField)
         backgroundColor = .clear
         selectionStyle = .none
+        usernameTextField.delegate = self
+        
         usernameTextField.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
@@ -40,11 +45,7 @@ class TextFieldTableViewCell: UITableViewCell, TextFieldFormateDelegate {
             usernameTextField.rightAnchor.constraint(equalTo:  rightAnchor, constant: -16)
         ])
      }
-    
-    func format(text: String) {
-        <#code#>
-    }
-    
+  
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -56,4 +57,40 @@ class TextFieldTableViewCell: UITableViewCell, TextFieldFormateDelegate {
         // Configure the view for the selected state
     }
 
+}
+
+
+// MARK: -  TextField Delegate
+
+extension TextFieldTableViewCell: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        print("Username : \(textField.text ?? "nil" )")
+        self.formatDelegate?.format(text: textField.text!)
+        return true
+    }
+//    
+//    func textFieldDidEndEditing(_ textField: UITextField) {
+//        self.formatDelegate?.format(text: textField.text!)
+//    }
+//    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        // get the current text, or use an empty string if that failed
+        let currentText = textField.text ?? ""
+
+        // attempt to read the range they are trying to change, or exit if we can't
+        guard let stringRange = Range(range, in: currentText) else { return false }
+
+        // add their new text to the existing text
+        let updatedText = currentText.replacingCharacters(in: stringRange, with: string)
+
+        self.formatDelegate?.format(text: updatedText)
+        // make sure the result is under 30 characters
+        return updatedText.count <= 30
+        
+        
+    }
+    
+    @objc func valueChanged(_ textField: UITextField){
+       
+    }
 }

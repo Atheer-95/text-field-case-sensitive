@@ -8,8 +8,7 @@
 import UIKit
 
 class TextFieldFormatsTableViewCell: UITableViewCell {
-
-    
+   
     
     lazy var formatLabel: UILabel = {
         let l = UILabel()
@@ -66,15 +65,24 @@ class TextFieldFormatsTableViewCell: UITableViewCell {
         // Initialization code
     }
     
-    func isTextFormated(_ bool: Bool) {
-        if bool {
+    func isTextFormated(_ text: String) {
+    
+        if text.isEmpty {
+            
+        } else {
             changeOptionState()
         }
+        
     }
+    
+  
+    
+
     
     func changeOptionState(){
         formatLabel.textColor = .green
         formatImage.image = UIImage(systemName: "checkmark.circle.fill")
+        formatImage.tintColor = .green
     }
     
     required init?(coder: NSCoder) {

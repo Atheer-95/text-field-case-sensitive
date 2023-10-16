@@ -59,7 +59,7 @@ class ViewController: UIViewController {
     
     @objc func goToUser(){
         let vc = UsernameViewController()
-        self.navigationController?.pushViewController(vc, animated: true)
+        self.present(vc, animated: false)
     }
     
 //    @objc func goToTable(){
