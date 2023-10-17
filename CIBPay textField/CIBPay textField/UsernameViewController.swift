@@ -51,19 +51,32 @@ class UsernameViewController: UIViewController {
         tableView.register(ButtonTableViewCell.self, forCellReuseIdentifier: ButtonTableViewCellIdentifier)
     }
     
-    func isUsernameValid() -> Bool{
+    func isUsernameValid(format: TextFieldFormat) -> Bool{
+        guard let username = textFiledInput?.trimmingCharacters(in: .whitespacesAndNewlines) else { return false}
         
-//        if usernameTF.text?.trimmingCharacters(in: .whitespacesAndNewlines) == ""{
-//            print("Not valid")
-//            return false
-//        }
-//        
-//        let username = usernameTF.text!.trimmingCharacters(in: .whitespacesAndNewlines)
-//        if username.count < 6 {
-//           print("Not valid")
-//            return false
-//        }
-        return false
+        switch format {
+        case .maximum_length:
+            return true
+        case .minimum_length:
+            // Minimum
+            if username.count < 6 {
+                return false
+            }
+        case .spaces:
+            // spaces
+            if textFiledInput?.rangeOfCharacter(from: .whitespacesAndNewlines) != nil {
+                return false
+            }
+        case .alphanumeric, .special_characters:
+            // Alphanumaric and special caracters
+            
+            let characterset = NSCharacterSet(charactersIn: "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789")
+            if username.rangeOfCharacter(from: characterset.inverted) != nil {
+                print("string contains special characters")
+                return false
+            }
+        }
+        return true
     }
 
 }
@@ -76,7 +89,7 @@ extension UsernameViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch Section.allCases[section] {
         case .usernameTextField: return 1
-        case .usernameFormats: return 5 // formats
+        case .usernameFormats: return 5
 //        case .buttons: return 2
         }
     }
@@ -87,20 +100,14 @@ extension UsernameViewController: UITableViewDelegate, UITableViewDataSource {
             let cell: TextFieldTableViewCell = tableView.dequeueReusableCell(withIdentifier: TextFieldTableViewCellIdentifier) as! TextFieldTableViewCell
     
             cell.formatDelegate = self
-//            cell.format(text: cell.usernameTextField.text ?? "Null")
             return cell
         case .usernameFormats:
             let cell: TextFieldFormatsTableViewCell = tableView.dequeueReusableCell(withIdentifier: UsernameFormatsTableViewCellIdentifier) as! TextFieldFormatsTableViewCell
-//            let data = usernameFormats[indexPath.row]
-//            cell.setupLabel(text: data)
-            let format = TextFieldFormats.allCases[indexPath.row].title
-            cell.setupData(data: format)
-//            cell.setupData(data: data.format)
-            cell.isTextFormated(textFiledInput ?? "")
+            let format = TextFieldFormat.allCases[indexPath.row]
+            cell.setupData(data: format.title)
+            cell.isTextFormated(isUsernameValid(format: format))
             return cell
-//        case .buttons:
-//            let cell: ButtonTableViewCell = tableView.dequeueReusableCell(withIdentifier: ButtonTableViewCellIdentifier) as! ButtonTableViewCell
-//            return cell
+
             
         }
             
@@ -183,9 +190,9 @@ private enum Section: CaseIterable {
     }
 }
 
+// MARK: - TextFieldFormats
 
-
-enum TextFieldFormats: CaseIterable {
+enum TextFieldFormat: CaseIterable {
     case maximum_length,
     minimum_length,
     special_characters,
@@ -203,16 +210,3 @@ enum TextFieldFormats: CaseIterable {
         }
     }
 }
-
-
-/*
- 
- Username Rules: -
- 
- Maximum length should be 30 characters
- Minimum length should be 6 characters
- Special characters not allowed. (#, %, &, ^, !)
- Spaces is not allowed.
- Alphanumeric (xshi193)
- 
- */

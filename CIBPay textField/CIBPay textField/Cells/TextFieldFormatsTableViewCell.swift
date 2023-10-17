@@ -42,6 +42,7 @@ class TextFieldFormatsTableViewCell: UITableViewCell {
         contentView.addSubview(formatImage)
         backgroundColor = .clear
         selectionStyle = .none
+        
         formatLabel.translatesAutoresizingMaskIntoConstraints = false
         formatImage.translatesAutoresizingMaskIntoConstraints = false
         
@@ -65,21 +66,22 @@ class TextFieldFormatsTableViewCell: UITableViewCell {
         // Initialization code
     }
     
-    func isTextFormated(_ text: String) {
-    
-        if text.isEmpty {
-            
+    func isTextFormated(_ bool: Bool) {
+        if bool {
+            formatedState()
         } else {
-            changeOptionState()
+            notFormatedState()
         }
         
     }
     
-  
+    func notFormatedState(){
+        formatImage.image = UIImage(systemName: "circle")
+        formatImage.tintColor = .gray
+    }
     
-
     
-    func changeOptionState(){
+    func formatedState(){
         formatImage.image = UIImage(systemName: "checkmark.circle.fill")
         formatImage.tintColor = .systemGreen
     }
