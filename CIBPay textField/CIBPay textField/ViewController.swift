@@ -31,6 +31,7 @@ class ViewController: UIViewController {
 //    }()
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .blue
         setButtons()
     }
 
@@ -51,15 +52,36 @@ class ViewController: UIViewController {
         
         
     }
+    
+    func stepsView(){
+        
+    }
 
     @objc func goToPsw(){
         let vc = PasswordViewController()
-        self.navigationController?.pushViewController(vc, animated: true)
+//        self.navigationController?.pushViewController(vc, animated: true)
+        let navigationVC = UINavigationController(rootViewController: vc)
+        if let sheet = navigationVC.sheetPresentationController{
+            sheet.detents = [.large(), .medium()]
+        }
+        self.present(navigationVC, animated: false)
     }
     
     @objc func goToUser(){
         let vc = UsernameViewController()
-        self.present(vc, animated: false)
+        let navigationVC = UINavigationController(rootViewController: vc)
+        navigationVC.isModalInPresentation = true
+        if let sheet = navigationVC.sheetPresentationController{
+            //            sheet.detents = [.large(), .medium()]
+            sheet.detents = [ .large(),
+                              .custom(resolver: { context in
+                                  0.7 * context.maximumDetentValue
+                              })]
+            sheet.prefersPageSizing = true
+            sheet.selectedDetentIdentifier = .large
+            
+        }
+        navigationController?.present(navigationVC, animated: false)
     }
     
 //    @objc func goToTable(){

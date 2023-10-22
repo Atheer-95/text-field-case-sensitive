@@ -66,6 +66,7 @@ extension TextFieldTableViewCell: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         print("Username : \(textField.text ?? "nil" )")
         self.formatDelegate?.format(text: textField.text!)
+    
         return true
     }
 //    
