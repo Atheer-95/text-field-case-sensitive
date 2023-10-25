@@ -23,6 +23,9 @@
 		05065C9C2AD815BC00F4DFC3 /* TextFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05065C9B2AD815BC00F4DFC3 /* TextFormat.swift */; };
 		05065C9F2AD81CE800F4DFC3 /* TextFieldFormateDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05065C9E2AD81CE800F4DFC3 /* TextFieldFormateDelegate.swift */; };
 		05065CA12ADE76C200F4DFC3 /* Extension+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05065CA02ADE76C200F4DFC3 /* Extension+String.swift */; };
+		05065CA52AE916C000F4DFC3 /* StepperData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05065CA42AE916C000F4DFC3 /* StepperData.swift */; };
+		05065CA72AE9170400F4DFC3 /* StepperItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05065CA62AE9170400F4DFC3 /* StepperItem.swift */; };
+		05065CA92AE9186200F4DFC3 /* StepperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05065CA82AE9186200F4DFC3 /* StepperView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +47,9 @@
 		05065C9B2AD815BC00F4DFC3 /* TextFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFormat.swift; sourceTree = "<group>"; };
 		05065C9E2AD81CE800F4DFC3 /* TextFieldFormateDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldFormateDelegate.swift; sourceTree = "<group>"; };
 		05065CA02ADE76C200F4DFC3 /* Extension+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+String.swift"; sourceTree = "<group>"; };
+		05065CA42AE916C000F4DFC3 /* StepperData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepperData.swift; sourceTree = "<group>"; };
+		05065CA62AE9170400F4DFC3 /* StepperItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepperItem.swift; sourceTree = "<group>"; };
+		05065CA82AE9186200F4DFC3 /* StepperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepperView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,12 +87,11 @@
 				05065C582AD3F43E00F4DFC3 /* SceneDelegate.swift */,
 				05065C5A2AD3F43E00F4DFC3 /* ViewController.swift */,
 				05065C9D2AD815C000F4DFC3 /* Model */,
-				05065C932AD6CA8300F4DFC3 /* Cells */,
+				05065CA32AE916A200F4DFC3 /* View */,
 				05065C8E2AD6B5F900F4DFC3 /* Generic Table */,
 				05065C852AD5595300F4DFC3 /* PasswordViewController.swift */,
 				05065C872AD5597000F4DFC3 /* UsernameViewController.swift */,
 				05065CA02ADE76C200F4DFC3 /* Extension+String.swift */,
-				05065C982AD7EC1C00F4DFC3 /* Custom Views */,
 				05065C5F2AD3F43F00F4DFC3 /* Assets.xcassets */,
 				05065C642AD3F43F00F4DFC3 /* Info.plist */,
 			);
@@ -125,8 +130,20 @@
 			isa = PBXGroup;
 			children = (
 				05065C9B2AD815BC00F4DFC3 /* TextFormat.swift */,
+				05065CA42AE916C000F4DFC3 /* StepperData.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		05065CA32AE916A200F4DFC3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				05065C932AD6CA8300F4DFC3 /* Cells */,
+				05065C982AD7EC1C00F4DFC3 /* Custom Views */,
+				05065CA62AE9170400F4DFC3 /* StepperItem.swift */,
+				05065CA82AE9186200F4DFC3 /* StepperView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,11 +219,14 @@
 				05065C972AD6D6A600F4DFC3 /* ButtonTableViewCell.swift in Sources */,
 				05065C5B2AD3F43E00F4DFC3 /* ViewController.swift in Sources */,
 				05065C8D2AD6B56E00F4DFC3 /* GenericTableViewController.swift in Sources */,
+				05065CA92AE9186200F4DFC3 /* StepperView.swift in Sources */,
 				05065C8A2AD68CCB00F4DFC3 /* CustomTextField.swift in Sources */,
 				05065CA12ADE76C200F4DFC3 /* Extension+String.swift in Sources */,
 				05065C862AD5595300F4DFC3 /* PasswordViewController.swift in Sources */,
+				05065CA72AE9170400F4DFC3 /* StepperItem.swift in Sources */,
 				05065C902AD6B62000F4DFC3 /* GenericTableViewCell.swift in Sources */,
 				05065C922AD6CA7800F4DFC3 /* TextFieldTableViewCell.swift in Sources */,
+				05065CA52AE916C000F4DFC3 /* StepperData.swift in Sources */,
 				05065C9A2AD7EC4F00F4DFC3 /* CustomButton.swift in Sources */,
 				05065C572AD3F43E00F4DFC3 /* AppDelegate.swift in Sources */,
 				05065C952AD6D08700F4DFC3 /* TextFieldFormatsTableViewCell.swift in Sources */,

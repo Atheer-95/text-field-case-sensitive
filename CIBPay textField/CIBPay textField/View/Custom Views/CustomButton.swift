@@ -51,6 +51,15 @@ class CustomButton: UIButton {
         }
     }
     
+    func setBackgroundColor(enabeld: Bool){
+        if enabeld {
+            defaultBackgroundColor = .blue
+        }
+        else {
+            disabledBackgroundColor = .systemGray3
+        }
+    }
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
