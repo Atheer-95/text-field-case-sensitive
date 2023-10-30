@@ -32,7 +32,7 @@ class StepperView: UIView {
     convenience init(frame: CGRect, steps: [StepperData]) {
         self.init(frame: frame)
         self.steps = steps
-        try? configureView(mode: .vertical)
+//        try? configureView(mode: .vertical)
     }
     
     override init(frame: CGRect) {
@@ -54,7 +54,7 @@ class StepperView: UIView {
         stepContainer.axis = mode == .vertical ? .vertical : .horizontal
         stepContainer.distribution = .equalSpacing
         
-        self.addSubview(stepContainer)
+//        self.addSubview(stepContainer)
         
         steps.forEach { step in
             let step = StepperItem(step: step,
@@ -82,7 +82,7 @@ class StepperView: UIView {
         scrollView.showsVerticalScrollIndicator = false
 
         scrollViewContainer.axis = .vertical
-        scrollViewContainer.spacing = 10
+        scrollViewContainer.spacing = 5
         scrollViewContainer.translatesAutoresizingMaskIntoConstraints = false
         scrollViewContainer.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor).isActive = true
         scrollViewContainer.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor).isActive = true

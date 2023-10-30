@@ -70,7 +70,7 @@ class ViewController: UIViewController {
     func createData() -> [StepperData]{
         let steps = [StepperData(stepId: 0, date: "", status: "Enter your username", stepComplete: true),
                      StepperData(stepId: 1, date: "", status: "Enter your card number & PIN", stepComplete: false),
-                     StepperData(stepId: 2, date:"", status: "Enter new password", stepComplete: false)]
+                     StepperData(stepId: 2, date: "", status: "Enter new password", stepComplete: false)]
          return steps
     }
 
