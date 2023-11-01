@@ -84,8 +84,8 @@ class StepperView: UIView {
         scrollViewContainer.axis = .vertical
         scrollViewContainer.spacing = 5
         scrollViewContainer.translatesAutoresizingMaskIntoConstraints = false
-        scrollViewContainer.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor).isActive = true
-        scrollViewContainer.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor).isActive = true
+        scrollViewContainer.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor, constant: 18).isActive = true
+        scrollViewContainer.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor,  constant: 18).isActive = true
         scrollViewContainer.topAnchor.constraint(equalTo: scrollView.topAnchor).isActive = true
         scrollViewContainer.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor).isActive = true
         scrollViewContainer.widthAnchor.constraint(equalTo: scrollView.widthAnchor).isActive = true

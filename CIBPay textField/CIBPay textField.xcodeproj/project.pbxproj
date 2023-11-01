@@ -26,6 +26,8 @@
 		05065CA52AE916C000F4DFC3 /* StepperData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05065CA42AE916C000F4DFC3 /* StepperData.swift */; };
 		05065CA72AE9170400F4DFC3 /* StepperItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05065CA62AE9170400F4DFC3 /* StepperItem.swift */; };
 		05065CA92AE9186200F4DFC3 /* StepperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05065CA82AE9186200F4DFC3 /* StepperView.swift */; };
+		057C62952AF252DE005072E9 /* CIBColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057C62942AF252DE005072E9 /* CIBColor.swift */; };
+		057C62972AF25872005072E9 /* Circle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057C62962AF25872005072E9 /* Circle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +52,8 @@
 		05065CA42AE916C000F4DFC3 /* StepperData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepperData.swift; sourceTree = "<group>"; };
 		05065CA62AE9170400F4DFC3 /* StepperItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepperItem.swift; sourceTree = "<group>"; };
 		05065CA82AE9186200F4DFC3 /* StepperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepperView.swift; sourceTree = "<group>"; };
+		057C62942AF252DE005072E9 /* CIBColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CIBColor.swift; sourceTree = "<group>"; };
+		057C62962AF25872005072E9 /* Circle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Circle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,7 +145,9 @@
 				05065C932AD6CA8300F4DFC3 /* Cells */,
 				05065C982AD7EC1C00F4DFC3 /* Custom Views */,
 				05065CA62AE9170400F4DFC3 /* StepperItem.swift */,
+				057C62962AF25872005072E9 /* Circle.swift */,
 				05065CA82AE9186200F4DFC3 /* StepperView.swift */,
+				057C62942AF252DE005072E9 /* CIBColor.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -219,6 +225,8 @@
 				05065C972AD6D6A600F4DFC3 /* ButtonTableViewCell.swift in Sources */,
 				05065C5B2AD3F43E00F4DFC3 /* ViewController.swift in Sources */,
 				05065C8D2AD6B56E00F4DFC3 /* GenericTableViewController.swift in Sources */,
+				057C62952AF252DE005072E9 /* CIBColor.swift in Sources */,
+				057C62972AF25872005072E9 /* Circle.swift in Sources */,
 				05065CA92AE9186200F4DFC3 /* StepperView.swift in Sources */,
 				05065C8A2AD68CCB00F4DFC3 /* CustomTextField.swift in Sources */,
 				05065CA12ADE76C200F4DFC3 /* Extension+String.swift in Sources */,

@@ -40,7 +40,7 @@ class ViewController: UIViewController {
 //    }()
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .blue
+        view.backgroundColor = CIBColor.backgroundBlue
 //        setButtons()
         goToUser()
         steps = createData( )
@@ -68,9 +68,9 @@ class ViewController: UIViewController {
     }
     
     func createData() -> [StepperData]{
-        let steps = [StepperData(stepId: 0, date: "", status: "Enter your username", stepComplete: true),
-                     StepperData(stepId: 1, date: "", status: "Enter your card number & PIN", stepComplete: false),
-                     StepperData(stepId: 2, date: "", status: "Enter new password", stepComplete: false)]
+        let steps = [StepperData(stepId: 1, date: "", status: "Enter your username", stepComplete: true),
+                     StepperData(stepId: 2, date: "", status: "Enter your card number & PIN", stepComplete: false),
+                     StepperData(stepId: 3, date: "", status: "Enter new password", stepComplete: false)]
          return steps
     }
 
@@ -113,9 +113,4 @@ class ViewController: UIViewController {
 //        let vc = GenericTableViewController()
 //        self.navigationController?.pushViewController(vc, animated: true)
 //    }
-}
-
-
-enum Step: CaseIterable {
-    
 }
