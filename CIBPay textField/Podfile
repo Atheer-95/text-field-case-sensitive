@@ -1,0 +1,12 @@
+project '/Users/atheerothman/text-field-case-sensitive/CIBPay textField/CIBPay textField.xcodeproj'
+
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'CIBPay textField' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for CIBPay textField
+pod 'MaterialComponents' 
+end

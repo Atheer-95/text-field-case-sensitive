@@ -28,6 +28,7 @@
 		05065CA92AE9186200F4DFC3 /* StepperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05065CA82AE9186200F4DFC3 /* StepperView.swift */; };
 		057C62952AF252DE005072E9 /* CIBColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057C62942AF252DE005072E9 /* CIBColor.swift */; };
 		057C62972AF25872005072E9 /* Circle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057C62962AF25872005072E9 /* Circle.swift */; };
+		23443731DD9B9ECFB6438729 /* Pods_CIBPay_textField.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E548A1E4933AF4E2CA23575 /* Pods_CIBPay_textField.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,9 @@
 		05065CA82AE9186200F4DFC3 /* StepperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepperView.swift; sourceTree = "<group>"; };
 		057C62942AF252DE005072E9 /* CIBColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CIBColor.swift; sourceTree = "<group>"; };
 		057C62962AF25872005072E9 /* Circle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Circle.swift; sourceTree = "<group>"; };
+		1E548A1E4933AF4E2CA23575 /* Pods_CIBPay_textField.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CIBPay_textField.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5F19A9F0899C786342F2E18 /* Pods-CIBPay textField.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CIBPay textField.debug.xcconfig"; path = "Target Support Files/Pods-CIBPay textField/Pods-CIBPay textField.debug.xcconfig"; sourceTree = "<group>"; };
+		EC49EF1F260E2B9841C3119A /* Pods-CIBPay textField.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CIBPay textField.release.xcconfig"; path = "Target Support Files/Pods-CIBPay textField/Pods-CIBPay textField.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23443731DD9B9ECFB6438729 /* Pods_CIBPay_textField.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,6 +77,8 @@
 			children = (
 				05065C552AD3F43E00F4DFC3 /* CIBPay textField */,
 				05065C542AD3F43E00F4DFC3 /* Products */,
+				4AB4D642B0C2AE39B41D1F1C /* Pods */,
+				9432FC294DC1E3DA7DBEDB20 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -86,16 +93,13 @@
 		05065C552AD3F43E00F4DFC3 /* CIBPay textField */ = {
 			isa = PBXGroup;
 			children = (
-				05065C9E2AD81CE800F4DFC3 /* TextFieldFormateDelegate.swift */,
 				05065C562AD3F43E00F4DFC3 /* AppDelegate.swift */,
 				05065C582AD3F43E00F4DFC3 /* SceneDelegate.swift */,
-				05065C5A2AD3F43E00F4DFC3 /* ViewController.swift */,
 				05065C9D2AD815C000F4DFC3 /* Model */,
 				05065CA32AE916A200F4DFC3 /* View */,
+				057C629D2AF3A3B0005072E9 /* Controller */,
 				05065C8E2AD6B5F900F4DFC3 /* Generic Table */,
-				05065C852AD5595300F4DFC3 /* PasswordViewController.swift */,
-				05065C872AD5597000F4DFC3 /* UsernameViewController.swift */,
-				05065CA02ADE76C200F4DFC3 /* Extension+String.swift */,
+				057C629E2AF3A3E0005072E9 /* Extension+Hepler */,
 				05065C5F2AD3F43F00F4DFC3 /* Assets.xcassets */,
 				05065C642AD3F43F00F4DFC3 /* Info.plist */,
 			);
@@ -144,12 +148,64 @@
 			children = (
 				05065C932AD6CA8300F4DFC3 /* Cells */,
 				05065C982AD7EC1C00F4DFC3 /* Custom Views */,
+				057C629F2AF3A44E005072E9 /* StepperView */,
+				057C62A02AF3A468005072E9 /* CIBTheme */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		057C629D2AF3A3B0005072E9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				05065C5A2AD3F43E00F4DFC3 /* ViewController.swift */,
+				05065C852AD5595300F4DFC3 /* PasswordViewController.swift */,
+				05065C872AD5597000F4DFC3 /* UsernameViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		057C629E2AF3A3E0005072E9 /* Extension+Hepler */ = {
+			isa = PBXGroup;
+			children = (
+				05065C9E2AD81CE800F4DFC3 /* TextFieldFormateDelegate.swift */,
+				05065CA02ADE76C200F4DFC3 /* Extension+String.swift */,
+			);
+			path = "Extension+Hepler";
+			sourceTree = "<group>";
+		};
+		057C629F2AF3A44E005072E9 /* StepperView */ = {
+			isa = PBXGroup;
+			children = (
 				05065CA62AE9170400F4DFC3 /* StepperItem.swift */,
 				057C62962AF25872005072E9 /* Circle.swift */,
 				05065CA82AE9186200F4DFC3 /* StepperView.swift */,
+			);
+			path = StepperView;
+			sourceTree = "<group>";
+		};
+		057C62A02AF3A468005072E9 /* CIBTheme */ = {
+			isa = PBXGroup;
+			children = (
 				057C62942AF252DE005072E9 /* CIBColor.swift */,
 			);
-			path = View;
+			path = CIBTheme;
+			sourceTree = "<group>";
+		};
+		4AB4D642B0C2AE39B41D1F1C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A5F19A9F0899C786342F2E18 /* Pods-CIBPay textField.debug.xcconfig */,
+				EC49EF1F260E2B9841C3119A /* Pods-CIBPay textField.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		9432FC294DC1E3DA7DBEDB20 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1E548A1E4933AF4E2CA23575 /* Pods_CIBPay_textField.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -159,9 +215,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 05065C672AD3F43F00F4DFC3 /* Build configuration list for PBXNativeTarget "CIBPay textField" */;
 			buildPhases = (
+				5AAACD29F5ECEFCF50047CC3 /* [CP] Check Pods Manifest.lock */,
 				05065C4F2AD3F43E00F4DFC3 /* Sources */,
 				05065C502AD3F43E00F4DFC3 /* Frameworks */,
 				05065C512AD3F43E00F4DFC3 /* Resources */,
+				FF20D6C5D5F5454E02192CF3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -215,6 +273,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5AAACD29F5ECEFCF50047CC3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CIBPay textField-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FF20D6C5D5F5454E02192CF3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CIBPay textField/Pods-CIBPay textField-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CIBPay textField/Pods-CIBPay textField-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CIBPay textField/Pods-CIBPay textField-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		05065C4F2AD3F43E00F4DFC3 /* Sources */ = {
@@ -368,6 +468,7 @@
 		};
 		05065C682AD3F43F00F4DFC3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A5F19A9F0899C786342F2E18 /* Pods-CIBPay textField.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -396,6 +497,7 @@
 		};
 		05065C692AD3F43F00F4DFC3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EC49EF1F260E2B9841C3119A /* Pods-CIBPay textField.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

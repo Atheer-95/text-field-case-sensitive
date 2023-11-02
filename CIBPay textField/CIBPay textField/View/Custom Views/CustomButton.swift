@@ -17,7 +17,7 @@ class CustomButton: UIButton {
     
 
     private var disabledBackgroundColor: UIColor = .systemGray3
-    private var defaultBackgroundColor: UIColor = .blue
+    private var defaultBackgroundColor: UIColor = CIBColor.backgroundBlue
     
     func filledStyleButton(title: String){
         self.setTitle(title, for: .normal)
@@ -30,9 +30,9 @@ class CustomButton: UIButton {
     func borderStyledButton(title: String){
         self.setTitle(title, for: .normal)
         self.backgroundColor = .white
-        self.setTitleColor(.blue, for: .normal)
+        self.setTitleColor(defaultBackgroundColor, for: .normal)
 //        self.layer.cornerRadius = 1
-        self.layer.borderColor = UIColor.blue.cgColor
+        self.layer.borderColor = defaultBackgroundColor.cgColor
         self.layer.borderWidth = 1
     }
     
