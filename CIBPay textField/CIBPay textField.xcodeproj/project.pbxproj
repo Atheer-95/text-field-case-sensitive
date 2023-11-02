@@ -125,13 +125,13 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
-		05065C982AD7EC1C00F4DFC3 /* Custom Views */ = {
+		05065C982AD7EC1C00F4DFC3 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
 				05065C892AD68CCB00F4DFC3 /* CustomTextField.swift */,
 				05065C992AD7EC4F00F4DFC3 /* CustomButton.swift */,
 			);
-			path = "Custom Views";
+			path = CustomViews;
 			sourceTree = "<group>";
 		};
 		05065C9D2AD815C000F4DFC3 /* Model */ = {
@@ -147,7 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				05065C932AD6CA8300F4DFC3 /* Cells */,
-				05065C982AD7EC1C00F4DFC3 /* Custom Views */,
+				05065C982AD7EC1C00F4DFC3 /* CustomViews */,
 				057C629F2AF3A44E005072E9 /* StepperView */,
 				057C62A02AF3A468005072E9 /* CIBTheme */,
 			);
@@ -219,7 +219,7 @@
 				05065C4F2AD3F43E00F4DFC3 /* Sources */,
 				05065C502AD3F43E00F4DFC3 /* Frameworks */,
 				05065C512AD3F43E00F4DFC3 /* Resources */,
-				FF20D6C5D5F5454E02192CF3 /* [CP] Embed Pods Frameworks */,
+				F0E7E83EDDB255AA2A856031 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -297,7 +297,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		FF20D6C5D5F5454E02192CF3 /* [CP] Embed Pods Frameworks */ = {
+		F0E7E83EDDB255AA2A856031 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -384,7 +384,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -447,7 +447,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;

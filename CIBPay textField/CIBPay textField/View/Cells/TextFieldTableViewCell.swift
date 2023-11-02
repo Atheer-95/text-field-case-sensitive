@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import MaterialComponents
 
 class TextFieldTableViewCell: UITableViewCell {
    
@@ -13,9 +14,14 @@ class TextFieldTableViewCell: UITableViewCell {
     
     var formatDelegate: TextFieldFormateDelegate?
     
-    lazy var usernameTextField: CustomTextField = {
-        let tf = CustomTextField()
+    lazy var usernameTextField:MDCOutlinedTextField = {
+        let tf = MDCOutlinedTextField(frame:CGRect(x: 0, y: 0, width: CGFloat(self.frame.width - 16), height: 40) )
+        tf.label.text = "Username"
         tf.placeholder = "Username"
+        tf.setOutlineColor(CIBColor.backgroundBlue, for: .editing)
+        tf.setFloatingLabelColor(CIBColor.backgroundBlue, for: .editing)
+        tf.leadingAssistiveLabel.text = "This is helper text"
+        tf.sizeToFit()
         return tf
     }()
     

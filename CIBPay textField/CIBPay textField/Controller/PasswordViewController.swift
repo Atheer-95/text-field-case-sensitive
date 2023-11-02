@@ -10,15 +10,35 @@ import MaterialComponents
 
 class PasswordViewController: UIViewController {
 
-    lazy var  passwordTextField1: CustomTextField = {
-        let tf = CustomTextField()
-        tf.placeholder = "Enter Password"
+//    lazy var  passwordTextField1: CustomTextField = {
+//        let tf = CustomTextField()
+//        tf.placeholder = "Enter Password"
+//        return tf
+//    }()
+//    
+    lazy var  passwordTextField1: MDCOutlinedTextField = {
+        let tf = MDCOutlinedTextField(frame:CGRect(x: 0, y: 0, width: CGFloat(view.frame.width - 16), height: 40) )
+        
+        tf.label.text = "Enter Password"
+        tf.placeholder = "********"
+        tf.setOutlineColor(CIBColor.backgroundBlue, for: .editing)
+        tf.setFloatingLabelColor(CIBColor.backgroundBlue, for: .editing)
+        tf.leadingAssistiveLabel.text = "This is helper text"
+        tf.isSecureTextEntry = true
+        tf.sizeToFit()
         return tf
     }()
     
-    lazy var  passwordTextField2: CustomTextField = {
-        let tf = CustomTextField()
-        tf.placeholder = "confirm Password"
+    lazy var  passwordTextField2: MDCOutlinedTextField = {
+        let tf = MDCOutlinedTextField(frame:CGRect(x: 0, y: 0, width: CGFloat(view.frame.width - 16), height: 40) )
+        
+        tf.label.text = "Confirm Password"
+        tf.placeholder = "*******"
+        tf.isSecureTextEntry = true
+        tf.leadingAssistiveLabel.text = "This is helper text"
+        tf.setOutlineColor(CIBColor.backgroundBlue, for: .editing)
+        tf.setFloatingLabelColor(CIBColor.backgroundBlue, for: .editing)
+        tf.sizeToFit()
         return tf
     }()
     
@@ -30,6 +50,7 @@ class PasswordViewController: UIViewController {
     }
   
    func setTextField(){
+       
        view.addSubview(passwordTextField1)
        view.addSubview(passwordTextField2)
        passwordTextField1.delegate = self
@@ -44,7 +65,7 @@ class PasswordViewController: UIViewController {
         passwordTextField1.leftAnchor.constraint(equalTo:  view.leftAnchor, constant: 16),
         passwordTextField1.rightAnchor.constraint(equalTo:  view.rightAnchor, constant: -16),
         
-        passwordTextField2.topAnchor.constraint(equalTo: passwordTextField1.bottomAnchor, constant: 16),
+        passwordTextField2.topAnchor.constraint(equalTo: passwordTextField1.bottomAnchor, constant: 40),
         passwordTextField2.heightAnchor.constraint(equalToConstant: 50),
         passwordTextField2.leftAnchor.constraint(equalTo:  view.leftAnchor, constant: 16),
         passwordTextField2.rightAnchor.constraint(equalTo:  view.rightAnchor, constant: -16),
